@@ -10,6 +10,7 @@
 #include <SDL.h>
 #include <vector>
 #include <cstdio>
+#include <cstdlib>
 
 class Asteroid {
 public:
@@ -20,6 +21,7 @@ public:
     int Update();
     virtual ~Asteroid();
 private:
+    int yRandomizer;
     int posX;
     int posY;
     SDL_Surface* asteroid;

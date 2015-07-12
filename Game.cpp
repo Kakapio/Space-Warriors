@@ -53,6 +53,8 @@ int Game::Init()
     {
         return 1;
     }    
+    
+    t.Update();
     return 0;
 }
 
