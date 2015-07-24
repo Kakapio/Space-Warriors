@@ -5,8 +5,6 @@
  * Created on May 25, 2015, 6:10 PM
  */
 
-#include <cstdlib>
-#include <ctime>
 #include <stdio.h>      
 #include <stdlib.h>     
 #include <time.h>
@@ -21,7 +19,7 @@ Asteroid::Asteroid()
 int Asteroid::Init()
 {
     srand(time(NULL));
-    yRandomizer = srand() % 600 + 1;
+    yRandomizer = rand() % 600 + 1;
     
     asteroid = SDL_LoadBMP ("data/images/asteroid.bmp");
     posX = 820;
@@ -49,6 +47,11 @@ int Asteroid::Update()
     if (true)
     {
         posX--;
+        
+        if (posX < -31)
+        {
+            Asteroid();
+        }
     }
     
 }
